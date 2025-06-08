@@ -1,0 +1,96 @@
+<nav class="bg-gray-800 text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <span class="text-xl font-bold">Management App</span>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <!-- Members Dropdown -->
+            <div class="relative group">
+              <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none">
+                Members
+                <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10">
+                <div class="py-1">
+                  <a routerLink="/members/add" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Add Member
+                  </a>
+                  <a routerLink="/members/view" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    View Members
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Settlements Dropdown -->
+            <div class="relative group">
+              <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none">
+                Settlements
+                <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10">
+                <div class="py-1">
+                  <a routerLink="/settlements/add" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Add Settlement</a>
+                  <a routerLink="/settlements/view" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">View Settlements</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="-mr-2 flex md:hidden">
+        <button type="button"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state -->
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <!-- Mobile Members dropdown -->
+      <div class="relative">
+        <button onclick="document.getElementById('mobile-members-dropdown').classList.toggle('hidden')"
+                class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 w-full text-left">
+          Members
+          <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="hidden bg-gray-700 rounded-md mt-1" id="mobile-members-dropdown">
+          <a routerLink="/members/add" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Add Member</a>
+          <a routerLink="/members/view" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">View Members</a>
+        </div>
+      </div>
+
+      <!-- Mobile Settlements dropdown -->
+      <div class="relative">
+        <button onclick="document.getElementById('mobile-settlements-dropdown').classList.toggle('hidden')"
+                class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 w-full text-left">
+          Settlements
+          <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="hidden bg-gray-700 rounded-md mt-1" id="mobile-settlements-dropdown">
+          <a routerLink="/settlements/add" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Add Settlement</a>
+          <a routerLink="/settlements/view" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">View Settlements</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
